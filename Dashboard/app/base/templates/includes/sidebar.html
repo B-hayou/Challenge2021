@@ -1,0 +1,42 @@
+<style>
+.bi {
+  color:#00f335;
+}
+</style>
+
+    <div class="sidebar">
+      <div class="sidebar-wrapper">
+        <div class="logo">
+          <img src="https://media.tenor.com/images/0c0f3de8e7703cfe8854071f88c08e90/tenor.gif" alt="">
+          <center><h2>BIKES FORECASTING</h2> </center>  
+        </div>
+        <ul class="nav">
+
+          <li class="{% if 'index' in segment %} active {% endif %}">
+            <a href="/">
+              <i class="tim-icons icon-chart-pie-36"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="{% if 'forcast' in segment %} active {% endif %}">
+            <a href="/forcast">
+              <i class="tim-icons icon-chart-bar-32"></i>
+              <p>Forecasting</p>
+            </a>
+          </li>
+        <li>
+          <div class="col-md-12">
+            <button class="btn btn-Success  btn-block" onclick="window.location.href='{{ url_for( 'base_blueprint.logout') }}';demo.showNotification('top','left');">Retrain model </button>
+          </div>
+        </li>
+        <li>
+          <div class="col-md-12">
+            <button class="btn btn-Success  btn-block" onclick="window.location.href='http://localhost:8883/api/';">Try our API</button>
+          </div>
+        </li>
+
+                    
+        </ul>
+        
+      </div>
+    </div>

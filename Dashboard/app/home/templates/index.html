@@ -1,0 +1,119 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-category">Bikes per Hour</h5>
+        <h3 class="card-title"><i class="fa fa-bicycle"></i>  {{ hours[1][-1]}}  Bikes  counted today at {{ (hours[0][-1].split())[1] }}  </h3>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <canvas id="CountryChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-category">Bikes per Day</h5>
+        <h3 class="card-title"><i class="fa fa-bicycle"></i> {{ days[1][-1]}}  Bikes  counted today </h3>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <canvas id="CountryChart1"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-category">Bikes per week</h5>
+        <h3 class="card-title"><i class="fa fa-bicycle"></i> {{ weeks[1][-1]}}  Bikes  counted the week of  {{ (weeks[0][-1].split())[0] }} </h3>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <canvas id="CountryChart2"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-category">Bikes per month</h5>
+        <h3 class="card-title"><i class="fa fa-bicycle"></i> {{ months[1][-1]}}  Bikes  counted  in {{ ((months[0][-1].split())[0]).split("-")[0] }}-{{ ((months[0][-1].split())[0]).split("-")[1] }} </h3>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <canvas id="CountryChart3"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-category">Bikes per Year</h5>
+        <h3 class="card-title"><i class="fa fa-bicycle"></i> {{ years[1][-1]}}  Bikes  counted  since the 1st january</h3>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <canvas id="CountryChart4"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+
+
+{% block javascripts %}
+
+<script>
+  $(document).ready(function () {
+    // Javascript method's body can be found in assets/js/demos.js
+    demo.initDashboardPageCharts();
+
+  });
+</script>
+<script>
+  var hour = {{hours[0] | tojson }} ;
+  var infos_hours = {{ hours[1]| tojson }} ;
+  var week = {{  weeks[0] | tojson }} ;
+  var infos_weeks = {{ weeks[1]| tojson }} ;
+  var day = {{  days[0] | tojson }} ;
+  var infos_days = {{ days[1]| tojson }} ;
+  var month = {{  months[0] | tojson }} ;
+  var infos_months = {{ months[1]| tojson }} ;
+  var year = {{  years[0] | tojson }} ;
+  var infos_years = {{ years[1]| tojson }} ;
+  
+  window.onload = function() {
+  demo.showattention('bottom','right');
+};
+  </script>
+
+
+{% endblock javascripts %}
