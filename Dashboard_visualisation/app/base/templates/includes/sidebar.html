@@ -1,0 +1,32 @@
+<style>
+  .bi {
+    color: #00f335;
+  }
+  .icon_barside {
+    background: url('icon.png');
+    height: 10px;
+    width: 10px;
+    display: block;
+    /* Other styles here */
+}
+</style>
+
+<div class="sidebar">
+  <div class="sidebar-wrapper">
+    <div class="logo">
+
+    </div>
+    <ul class="nav">
+      {%for i in range(0, len)%}
+      <li class="{% if 'index' in segment %} active {% endif %}">
+        <a href="{{url_for('home_blueprint.index', type=stations[i])}}">
+          <i class="fa fa-bicycle"></i>
+          <p style="font-weight: bold; font-size: 12px;">{{' '.join(stations[i].split(" ")[2:])}}</p>
+        </a>
+        {%endfor%}
+
+
+    </ul>
+
+  </div>
+</div>

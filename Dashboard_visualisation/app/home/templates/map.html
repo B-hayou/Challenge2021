@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_27d0fd4f3c554a8a9140c93a720b6b38 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_27d0fd4f3c554a8a9140c93a720b6b38" ></div>
+        
+</body>
+<script>    
+    
+            var map_27d0fd4f3c554a8a9140c93a720b6b38 = L.map(
+                "map_27d0fd4f3c554a8a9140c93a720b6b38",
+                {
+                    center: [43.6162094554924, 3.87440800666809],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 100,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e05021b6b89e4cf9b6f90f98360353a0 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_27d0fd4f3c554a8a9140c93a720b6b38);
+        
+    
+            var circle_marker_844418fd17dd4f69a5f717ec2d24d76d = L.circleMarker(
+                [43.6162094554924, 3.87440800666809],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
+            ).addTo(map_27d0fd4f3c554a8a9140c93a720b6b38);
+        
+    
+        var popup_124d5838362743f4833e429d30bfad3e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d3e5ebd55094919942962c29f22bd8e = $(`<div id="html_8d3e5ebd55094919942962c29f22bd8e" style="width: 100.0%; height: 100.0%;">1898 Bikes counted 2021-03-30 00:00:00 in Compteur Vélo Tanneursstation</div>`)[0];
+            popup_124d5838362743f4833e429d30bfad3e.setContent(html_8d3e5ebd55094919942962c29f22bd8e);
+        
+
+        circle_marker_844418fd17dd4f69a5f717ec2d24d76d.bindPopup(popup_124d5838362743f4833e429d30bfad3e)
+        ;
+
+        
+    
+    
+            var marker_fcb8fba4e78847edaf46c957c48feee7 = L.marker(
+                [43.6162094554924, 3.87440800666809],
+                {"radius": 70}
+            ).addTo(map_27d0fd4f3c554a8a9140c93a720b6b38);
+        
+    
+            var icon_1a861afa384e43608c581a3d7ea3a1b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fcb8fba4e78847edaf46c957c48feee7.setIcon(icon_1a861afa384e43608c581a3d7ea3a1b7);
+        
+    
+        var popup_4032273785644ffbaec13fae02ec3a37 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af52d796edab4f6692eb46591892f68d = $(`<div id="html_af52d796edab4f6692eb46591892f68d" style="width: 100.0%; height: 100.0%;">1898 Bikes counted 2021-03-30 00:00:00 in Compteur Vélo Tanneurs station</div>`)[0];
+            popup_4032273785644ffbaec13fae02ec3a37.setContent(html_af52d796edab4f6692eb46591892f68d);
+        
+
+        marker_fcb8fba4e78847edaf46c957c48feee7.bindPopup(popup_4032273785644ffbaec13fae02ec3a37)
+        ;
+
+        
+    
+</script>
